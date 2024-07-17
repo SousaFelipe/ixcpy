@@ -1,0 +1,9 @@
+ixcpy.egg-info/
+__pycache__/
+output/
+build/
+dist/
+.venv/
+
+setup.json
+.env
