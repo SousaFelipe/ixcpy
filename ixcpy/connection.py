@@ -27,7 +27,7 @@ class Connection:
             server: str,
             token: str,
             table: str,
-            ssl: bool = False,
+            ssl: bool = True,
             encoded: bool = False):
         
         self._server: str = server if encoded else uri(server=server, ssl=ssl) + '/webservice/v1'

@@ -16,15 +16,10 @@ Para estabelecer uma conexão corretamente, é necessário fornecer o token de a
 Exemplo:
 
 ```python
-
-class Connection:
-  def __init__(self, server: str, token: str, table: str, ssl: bool = False, ...):
-    ...
-
 connection = Connection(
-  server='seu_domínio_ixc.com.br',  # Também pode ser Um enderço de IP, caso seu servidor IXC não possua domínio
-  token='seu_token_ixc',            # Verificar a última referência a baixo
-  table='su_oss_chamado',           # Exemplo de como realizar requisições na tabela de Ordens de Serviço
+  server='seu_domínio_ixc.com.br',  # Também pode ser um enderço de IP
+  token='seu_token_ixc',            # Verificar a última referência
+  table='su_oss_chamado',           # Exemplo de requisição na tabela de Ordens de Serviço
   ...
 )
 ```

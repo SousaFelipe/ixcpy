@@ -35,8 +35,7 @@ def chamados_source():
         connection=Connection(
             server=SERVER,
             token=TOKEN,
-            table='su_oss_chamado',
-            ssl=True
+            table='su_oss_chamado'
         ),
         args=[
             'status="F"',
@@ -51,8 +50,7 @@ def assuntos_source():
         connection=Connection(
             server=SERVER,
             token=TOKEN,
-            table='su_oss_assunto',
-            ssl=True
+            table='su_oss_assunto'
         ),
         args=['ativo="S"']
     )
