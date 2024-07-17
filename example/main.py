@@ -1,6 +1,6 @@
 from ixcpy import Connection
-from ixcpy.data import Excel
 
+from excel import Excel
 from options import option_period, option_tecnico
 from source import append_source, load_source, merge_source
 from utils import terminal, clear_screen
