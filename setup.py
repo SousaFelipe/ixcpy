@@ -7,7 +7,7 @@ with open('README.md', 'r', encoding='utf-8') as file:
 
 setup(
     name='ixcpy',
-    version='1.0.2',
+    version='1.0.3',
     license='MIT License',
     author='Felipe Sousa',
     long_description=readme,
@@ -16,16 +16,11 @@ setup(
     description=u'Wrapper não oficial da API do IXC',
     url='https://github.com/SousaFelipe/ixcpy',
     packages=['ixcpy'],
+    install_requires=['requests'],
     keywords=[
         'ixc',
         'ixcsoft',
         'api ixc',
         'ixc python'
-    ],
-    install_requires=[
-        'numpy',
-        'openpyxl',
-        'pandas',
-        'requests'
     ]
 )
