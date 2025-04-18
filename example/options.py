@@ -21,12 +21,11 @@ def option_tecnico() -> str:
 
     while True:
 
-        print(' 9  - Weberson Ferreira')
-        print(' 20 - Carlos Alberto')
-        print(' 37 - Everson Araujo')
-        print(' 38 - Ismael Rodrigues')
-        print(' 54 - Saulo Viana')
-        print(' 55 - Kaik Vitoriano')
+        print(' 1 - John Doe')
+        print(' 2 - John Doe')
+        print(' 3 - John Doe')
+        print(' 4 - John Doe')
+        print(' 5 - John Doe')
 
         id = terminal('Digite o ID correspondente ao técnico:')
 
