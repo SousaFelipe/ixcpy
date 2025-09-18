@@ -1,13 +1,14 @@
-import requests
 import base64
+from typing import Union
+
+import requests
 import json
 
 from .query import Query
 from .response import Response
 
 
-
-def headers(request: str = '', token: str = '') -> dict[str, str]:
+def headers(request: str = '', token: bytes = b'') -> dict[str, str]:
     return {
         'ixcsoft': request,
         'Authorization': 'Basic {}'.format(base64.b64encode(token).decode('utf-8')),
@@ -19,19 +20,16 @@ def uri(server: str, ssl: bool) -> str:
     return server_host
 
 
-
 class Connection:
 
 
     def __init__(self,
             server: str,
-            token: str,
+            token: bytes | str,
             table: str,
-            ssl: bool = True,
-            encoded: bool = False):
-        
-        self._server: str = server if encoded else uri(server=server, ssl=ssl) + '/webservice/v1'
-        self._token: str = token if encoded else token.encode('utf-8')
+            ssl: bool = True):
+        self._server: str = uri(server=server, ssl=ssl) + '/webservice/v1'
+        self._token: bytes = token if isinstance(token, bytes) else token.encode('utf-8')
         self._table: str = table
         self._grid: list = []
 
@@ -71,19 +69,17 @@ class Connection:
         return Response(response.text)
 
 
-    def one(self, id) -> dict[str, any] | None:
+    def one(self, record_id: int) -> dict[str, Union[str, int, bool]]:
 
         connection = Connection(
             server=self._server,
             token=self._token,
-            table=self._table,
-            encoded=True)
+            table=self._table)
         
-        connection.where(query=Query(arg=f'id = "{id}"'))
+        connection.where(query=Query(arg=f'id = "{record_id}"'))
         
         response = connection.many()
-
         if response.total() > 0:
             return response.records()[0]
         
-        return None
+        raise Exception("Registro não encontrado")

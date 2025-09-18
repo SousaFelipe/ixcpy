@@ -8,7 +8,7 @@ from utils import terminal, clear_screen
 
 
 SERVER = 'seu_domínio_ixc.com.br'
-TOKEN = 'SEU_TOKEN_IXC'
+TOKEN = 'seu_token_ixc'
 
 
 

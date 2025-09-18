@@ -8,12 +8,11 @@ def option_period() -> tuple:
     print('----------------------------------------')
     start = terminal(' Data inicial (dd/mm/aaaa):')
     final = terminal(' Data final (dd/mm/aaaa):')
-    return (start, final)
+    return start, final
 
 
 def option_tecnico() -> str:
-
-    ids: str = ['9', '20', '37', '38', '54', '55']
+    ids: list[str] = ['9', '20', '37', '38', '54', '73']
 
     print('\n========================================')
     print(' Técnico...')
@@ -27,9 +26,9 @@ def option_tecnico() -> str:
         print(' 4 - John Doe')
         print(' 5 - John Doe')
 
-        id = terminal('Digite o ID correspondente ao técnico:')
+        id_do_tecnico = terminal('Digite o ID correspondente ao técnico:')
 
-        if id in ids:
-            return id
+        if id_do_tecnico in ids:
+            return id_do_tecnico
         else:
             print('\nO ID "{}" não corresponde a nenhum técnico.\nPor favor, selecione novamente...\n')
