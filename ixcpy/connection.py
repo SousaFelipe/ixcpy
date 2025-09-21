@@ -69,17 +69,13 @@ class Connection:
         return Response(response.text)
 
 
-    def one(self, record_id: int) -> dict[str, Union[str, int, bool]]:
-
-        connection = Connection(
-            server=self._server,
-            token=self._token,
-            table=self._table)
+    def one(self, record_id: int) -> dict[str, Union[str, int, bool]] | None:
         
+        connection = Connection(server=self._server, token=self._token, table=self._table)
         connection.where(query=Query(arg=f'id = "{record_id}"'))
-        
         response = connection.many()
+
         if response.total() > 0:
             return response.records()[0]
-        
-        raise Exception("Registro não encontrado")
+
+        return None
