@@ -1,13 +1,13 @@
 from setuptools import setup
 
 
-with open('README.md', 'r', encoding='utf-8') as file:
+with open('README_PyPI.md', 'r', encoding='utf-8') as file:
     readme = file.read()
 
 
 setup(
     name='ixcpy',
-    version='1.1.0',
+    version='1.1.1',
     license='MIT License',
     author='Felipe Sousa',
     long_description=readme,
