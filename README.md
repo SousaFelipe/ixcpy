@@ -1,7 +1,7 @@
 
 # ixcpy [![PyPI downloads](https://img.shields.io/pypi/dm/ixcpy.svg)](https://pypi.org/project/ixcpy/)
 
-Um wrapper de conexão com a API do IXC Provedor
+Wrapper não oficial para conexão com a API do sistema IXC Provedor
 
 Esta biblioteca não faz parte das bibliotecas oficiais do <a href="https://ixcsoft.com/ixc-provedor" target="_blank">IXC Provedor.</a>\
 O desenvolvimento é feito de forma independente e utiliza apenas uma "interface" de conexão com as funcionalidades providas pela API oficial do IXC.\

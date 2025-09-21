@@ -13,7 +13,7 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     author_email='sousa.felipe@outlook.com',
-    description=u'Wrapper não oficial da API do sistema IXC Provedor',
+    description=u'Wrapper não oficial para conexão com a API do sistema IXC Provedor',
     url='https://github.com/SousaFelipe/ixcpy',
     packages=['ixcpy'],
     install_requires=['requests'],
